@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявка | Фантоми</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>ПОДАТИ ЗАЯВКУ</h1>
+</header>
+
+<nav>
+    <a href="index.html">Головна</a>
+    <a href="ranks.html">Ранги</a>
+    <a href="register.html">Заявка</a>
+</nav>
+
+<section class="hero">
+    <h2>Анкета кандидата</h2>
+
+    <form onsubmit="saveForm(event)">
+        <input type="text" id="nickname" placeholder="Ваш нік" required>
+        <input type="number" id="age" placeholder="Вік" required>
+        <input type="number" id="online" placeholder="Онлайн год/день" required>
+        <textarea id="reason" placeholder="Чому хочете до нас?" required></textarea>
+        <button type="submit">Відправити заявку</button>
+    </form>
+</section>
+
+<!-- Зелений екран -->
+<div id="successScreen">
+    <h1>✅ УСПІШНО</h1>
+    <p>Анкету створено</p>
+    <a href="index.html" class="success-btn">На головну</a>
+</div>
+
+<footer>
+    <p>© 2026 Сімʼя «Фантоми»</p>
+</footer>
+
+<script>
+function saveForm(event) {
+    event.preventDefault();
+
+    const application = {
+        nickname: document.getElementById("nickname").value,
+        age: document.getElementById("age").value,
+        online: document.getElementById("online").value,
+        reason: document.getElementById("reason").value
+    };
+
+    localStorage.setItem("myApplication", JSON.stringify(application));
+
+    document.getElementById("successScreen").style.display = "flex";
+}
+</script>
+
+</body>
+</html>

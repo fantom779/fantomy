@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої заявки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Мої заявки</h1>
+</header>
+
+<section class="hero">
+    <div id="applicationData"></div>
+    <br>
+    <a href="index.html">На головну</a>
+</section>
+
+<footer>
+    <p>© 2026 Сімʼя «Фантоми»</p>
+</footer>
+
+<script>
+const data = JSON.parse(localStorage.getItem("myApplication"));
+const container = document.getElementById("applicationData");
+
+if (data) {
+    container.innerHTML = `
+        <p><strong>Нік:</strong> ${data.nickname}</p>
+        <p><strong>Вік:</strong> ${data.age}</p>
+        <p><strong>Онлайн год/день:</strong> ${data.online}</p>
+        <p><strong>Чому хочете до нас:</strong> ${data.reason}</p>
+        <br>
+        <button onclick="deleteApplication()">❌ Видалити заявку</button>
+    `;
+} else {
+    container.innerHTML = `<p>У вас ще немає заявки.</p>`;
+}
+
+function deleteApplication() {
+    localStorage.removeItem("myApplication");
+    container.innerHTML = `<p style="color: red;">Заявку видалено.</p>`;
+}
+</script>
+
+</body>
+</html>
