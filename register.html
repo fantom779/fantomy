@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заявка | Фантоми</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Реєстрація | Сім'я Фантомів</title>
+<link href="src=https://docs.google.com/forms/d/e/1FAIpQLSdW10E0_Gncqm5HqiWtKPcmhm5eDmC64N1LZEl1TtW4rnlb9g/viewform?embedded=true">
+<style>
+body{
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:linear-gradient(180deg,#8fb3c7,#c7e0d1);
+}
+.container{max-width:500px;margin:auto;padding:30px;}
+h1{font-size:30px;font-weight:800;margin-bottom:30px;}
+form{
+background:#e9eef2;
+padding:25px;
+border-radius:25px;
+}
+input, textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border-radius:10px;
+border:none;
+font-family:inherit;
+}
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:40px;
+background:black;
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+a{
+display:block;
+margin-top:20px;
+text-align:center;
+text-decoration:none;
+color:black;
+}
+</style>
 </head>
 <body>
+<div class="container">
+<h1>Подати заявку</h1>
 
-<header>
-    <h1>ПОДАТИ ЗАЯВКУ</h1>
-</header>
+<form>
+<input type="text" placeholder="Ваше ім'я" required>
+<input type="number" placeholder="Ваш вік" required>
+<textarea placeholder="Чому хочете вступити?" required></textarea>
+<button type="submit">Відправити</button>
+</form>
 
-<nav>
-    <a href="index.html">Головна</a>
-    <a href="ranks.html">Ранги</a>
-    <a href="register.html">Заявка</a>
-</nav>
-
-<section class="hero">
-    <h2>Анкета кандидата</h2>
-
-    <iframe 
-    src="https://docs.google.com/forms/d/e/1FAIpQLSdW10E0_Gncqm5HqiWtKPcmhm5eDmC64N1LZEl1TtW4rnlb9g/viewform?embedded=true"
-    class="google-form">
-</iframe>
-</section>
-
-
-<footer>
-    <p>© 2026 Сімʼя «Фантоми»</p>
-</footer>
-
-<script>
-function saveForm(event) {
-    event.preventDefault();
-
-    const application = {
-        nickname: document.getElementById("nickname").value,
-        age: document.getElementById("age").value,
-        online: document.getElementById("online").value,
-        reason: document.getElementById("reason").value
-    };
-
-    localStorage.setItem("myApplication", JSON.stringify(application));
-
-    document.getElementById("successScreen").style.display = "flex";
-}
-</script>
-
+<a href="index.html">Назад</a>
+</div>
 </body>
 </html>
