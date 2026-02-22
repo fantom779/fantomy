@@ -101,14 +101,33 @@ h1 {
     color: white;
 }
 
-.bottom-nav div {
-    text-align: center;
-    font-size: 14px;
-    opacity: 0.7;
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:black;
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:20px 0;
+box-shadow:0 -5px 20px rgba(0,0,0,0.5);
+z-index:1000;
 }
 
-.bottom-nav div:hover {
-    opacity: 1;
+.bottom-nav a{
+color:white;
+text-decoration:none;
+font-size:16px;
+font-weight:600;
+padding:12px 18px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.bottom-nav a:hover{
+background:rgba(255,255,255,0.15);
+transform:translateY(-3px);
 }
 
 /* Адаптив */
@@ -156,11 +175,10 @@ h1 {
 </div>
 
 <div class="bottom-nav">
-    <a href="index.html">Головна</a>
-    <a href="ranks.html">Ранги</a>
-    <a href="rules.html">Правила</a>
-    <a href="register.html">Заявка</a>
+    <a href="index.html">🏠 Головна</a>
+    <a href="ranks.html">⭐ Ранги</a>
+    <a href="rules.html">📜 Правила</a>
+    <a href="register.html">📝 Заявка</a>
 </div>
-
 </body>
 </html>
