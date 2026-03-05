@@ -1,184 +1,86 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html>
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Сім'я Фантомів</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 
-<style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(180deg, #8fb3c7, #c7e0d1);
-    color: black;
-}
-
-/* Контейнер */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px 20px 120px 20px;
-}
-
-/* Заголовок */
-h1 {
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 30px;
-}
-
-/* Великий блок */
-.main-card {
-    background: #e9eef2;
-    border-radius: 25px;
-    padding: 25px;
-    margin-bottom: 40px;
-}
-
-.main-card h2 {
-    margin-top: 0;
-    font-size: 26px;
-}
-
-.main-card p {
-    opacity: 0.8;
-}
-
-/* Картки */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #e9eef2;
-    border-radius: 25px;
-    padding: 30px 20px;
-    text-align: center;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.03);
-}
-
-/* Кнопка */
-.apply-btn {
-    display: block;
-    text-align: center;
-    margin: 50px auto 0;
-    background: black;
-    color: white;
-    padding: 18px;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: 600;
-    max-width: 300px;
-    transition: 0.3s;
-}
-
-.apply-btn:hover {
-    background: #333;
-}
-
-/* Нижнє меню */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: black;
-    display: flex;
-    justify-content: space-around;
-    padding: 15px 0;
-    color: white;
-}
-
-.bottom-nav{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:black;
-display:flex;
-justify-content:space-around;
-align-items:center;
-padding:20px 0;
-box-shadow:0 -5px 20px rgba(0,0,0,0.5);
-z-index:1000;
-}
-
-.bottom-nav a{
-color:white;
-text-decoration:none;
-font-size:16px;
-font-weight:600;
-padding:12px 18px;
-border-radius:15px;
-transition:0.3s;
-}
-
-.bottom-nav a:hover{
-background:rgba(255,255,255,0.15);
-transform:translateY(-3px);
-}
-
-/* Адаптив */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    .main-card {
-        padding: 20px;
-    }
-
-    .card {
-        padding: 20px;
-    }
-}
-</style>
 </head>
 
 <body>
 
+<header>
+
+<div class="logo">👻 Фантоми</div>
+
+<nav>
+
+<a href="index.html">Головна</a>
+<a href="ranks.html">Ранги</a>
+<a href="rules.html">Правила</a>
+<a href="leaders.html">Лідери</a>
+<a href="game.html">Міні-гра</a>
+<a href="apply.html">Подати заявку</a>
+
+</nav>
+
+</header>
+
+<div class="profile" onclick="toggleProfile()">👤</div>
+
+<div id="profilePanel">
+
+<h2>Профіль</h2>
+
+<p>Нік: Phantom</p>
+<p>Ранг: Новачок</p>
+
+</div>
+
 <div class="container">
 
-    <h1>Сім'я Фантомів</h1>
+<h1>Ласкаво просимо у сім'ю Фантомів</h1>
 
-    <div class="main-card">
-        <h2>Хто ми?</h2>
-        <p>
-            Сім'я Фантомів — це організована спільнота дисциплінованих,
-            активних та відповідальних учасників. Ми діємо як єдине ціле.
-        </p>
-    </div>
+<p>Сила • Гумор • Мемаси</p>
 
-    <div class="grid">
-        <div class="card">Еліта</div>
-        <div class="card">Дисципліна</div>
-        <div class="card">Сила</div>
-        <div class="card">Правила</div>
-        <div class="card">Ранги</div>
-        <div class="card">Контакти</div>
-    </div>
+<div class="cards">
 
-    <a href="register.html" class="apply-btn">Подати заявку</a>
-    
+<div class="card">
+
+<h3>🐱 Мем дня</h3>
+
+<img src="https://i.imgur.com/8Km9tLL.jpeg" width="180">
+
 </div>
 
-<div class="bottom-nav">
-    <a href="index.html">🏠 Головна</a>
-    <a href="ranks.html">⭐ Ранги</a>
-    <a href="rules.html">📜 Правила</a>
-    <a href="register.html">📝 Заявка</a>
+<div class="card">
+
+<h3>⚡ Оновлення</h3>
+
+<p>Додано міні-гру</p>
+
 </div>
+
+<div class="card">
+
+<h3>🏆 Новий ранг</h3>
+
+<p>Фантом-Легенда</p>
+
+</div>
+
+</div>
+
+<a href="apply.html">
+<button class="apply-btn">Подати заявку</button>
+</a>
+
+</div>
+
 </body>
+
 </html>
